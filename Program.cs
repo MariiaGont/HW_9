@@ -14,6 +14,7 @@
             
             Console.Write($"Числа кратные 3-ём в промежутке от {m} до {n} -> ");
             RecTask64(m, n);
+            Console.WriteLine("\n");
 
             void RecTask64(int firstNumber, int secondNumber)
             {
@@ -30,7 +31,6 @@
                     RecTask64(firstNumber, secondNumber);
                 }
             }
-            Console.WriteLine("\n");
         }
 
         // Задача 66: Задайте значения M и N. Напишите рекурсивный метод, 
@@ -45,6 +45,7 @@
             
             Console.Write($"Сумма натуральных чисел в промежутке от {m} до {n} равна ");
             RecTask66(m, n);
+            Console.WriteLine("\n");
             
             void RecTask66(int firstNumber, int secondNumber, int sum = 0)
             {
@@ -57,7 +58,6 @@
                 firstNumber++;
                 RecTask66(firstNumber, secondNumber, sum);
             }
-            Console.WriteLine("\n");
         }
 
         // Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
