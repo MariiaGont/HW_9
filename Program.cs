@@ -42,8 +42,10 @@
             Random rand = new Random();
             int m = rand.Next(0, 15);
             int n = rand.Next(15, 50);
-            Console.Write($"Сумма чисел в промежутке от {m} до {n} равна ");
+            
+            Console.Write($"Сумма натуральных чисел в промежутке от {m} до {n} равна ");
             RecTask66(m, n);
+            
             void RecTask66(int firstNumber, int secondNumber, int sum = 0)
             {
                 if (firstNumber > secondNumber) 
@@ -63,10 +65,13 @@
         void Task68()
         {
             Console.WriteLine("Программа задаёт два неотрицательных числа и вычисляет функцию Аккермана.");
-            Random rand = new Random();
-            int m = rand.Next(0, 4);
-            int n = rand.Next(0, 5);
-            Console.WriteLine($"A({m},{n}) = {RecTask68(m, n)}");
+            Console.Write("Введите значение первого числа: ");
+            int m = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите значение второго числа: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            if (m >= 0 && n >= 0) Console.WriteLine($"A({m},{n}) = {RecTask68(m, n)}");
+            else Console.WriteLine($"Введённые значения не являются допустимыми.");
+            
             int RecTask68(int firstNumber, int secondNumber)
             {
                 if (firstNumber == 0)
@@ -82,10 +87,7 @@
                     return RecTask68(firstNumber - 1, RecTask68(firstNumber, secondNumber - 1));
                 }
             }
-            Console.WriteLine("\n");
         }
-
-
         Task64();
         Task66();
         Task68();
