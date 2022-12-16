@@ -22,14 +22,9 @@
                 if (firstNumber % 3 == 0)
                 {
                     Console.Write(firstNumber + " ");
-                    firstNumber++;
-                    RecTask64(firstNumber, secondNumber);
                 }
-                else 
-                {
-                    firstNumber++;
-                    RecTask64(firstNumber, secondNumber);
-                }
+                firstNumber++;
+                RecTask64(firstNumber, secondNumber);
             }
         }
 
